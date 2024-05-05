@@ -1,0 +1,5 @@
+{
+  "lazy.nvim": { "branch": "main", "commit": "31ddbea7c10b6920c9077b66c97951ca8682d5c8" },
+  "marknav.nvim": { "branch": "main", "commit": "41b2942b8e0569148a8c61d92f9a13bfc90c1ec0" },
+  "tokyonight.nvim": { "branch": "main", "commit": "9bf9ec53d5e87b025e2404069b71e7ebdc3a13e5" }
+}

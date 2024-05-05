@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+alias nano="nvim"
+alias vim="nvim"
+
+alias lockscreen="i3lock -i $HOME/Desktop/Images/lockscreen.png"
+
+alias journal="cd $HOME/digital-journal && nvim README.md"
+alias jrnl="cd $HOME/digital-journal && nvim README.md"
+
+# for dotfiles
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
