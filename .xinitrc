@@ -11,6 +11,9 @@ unclutter --timeout 3 --jitter 50 --start-hidden &
 # Load Xresources (Cursor theme)
 xrdb -merge ~/.Xresources
 
+# Remap Caps Lock to Hyper
+setxkbmap -option caps:hyper
+
 # Start PipeWire before DWM to ensure it's in the same D-Bus session
 #gentoo-pipewire-launcher &
 
