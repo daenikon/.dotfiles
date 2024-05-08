@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+alias ls="ls --color --indicator-style=slash --group-directories-first"
+
 alias nano="nvim"
 alias vim="nvim"
 
@@ -10,3 +12,4 @@ alias jrnl="cd $HOME/digital-journal && nvim README.md"
 
 # for dotfiles
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+
