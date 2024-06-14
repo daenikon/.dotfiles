@@ -7,3 +7,4 @@
 /.config/dconf/
 /.config/htop/
 /.config/glib-2.0/
+/.config/tmux/plugins/

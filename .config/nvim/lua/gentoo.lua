@@ -1,4 +1,5 @@
-local DIR = "/home/neo/digital-journal/Gentoo"
+#local DIR = "/home/neo/digital-journal/Gentoo"
+local DIR = "/home/neo/digital-journal"
 local TEMPLATE = "/home/neo/.config/nvim/templates/gentoo_note.md"
 
 

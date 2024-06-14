@@ -11,7 +11,8 @@ local options = {
   softtabstop = 4,
   expandtab = true,
   -- misc
-  scrolloff = 16,
+  --scrolloff = 16,
+  scrolloff = 999,
   signcolumn = "yes",
   --concealcursor = "nc",
   wrap = false,
@@ -20,8 +21,10 @@ local options = {
   list = true,
   listchars = {
     --lead = '·',
-    lead = '⋅',
-    tab = '<->'
+    --lead = '⋅',
+    leadmultispace = "⋅⋅⋅|",
+    tab = "<->",
+    eol = "·"
   },
 }
 

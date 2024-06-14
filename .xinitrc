@@ -15,7 +15,7 @@ xrdb -merge ~/.Xresources
 setxkbmap -option caps:hyper
 
 # Start PipeWire before DWM to ensure it's in the same D-Bus session
-#gentoo-pipewire-launcher &
+gentoo-pipewire-launcher &
 
 # Start dwm with dbus-launch
 # "exec" means that no subsequent commands in that file will be executed
