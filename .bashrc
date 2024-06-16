@@ -1,11 +1,3 @@
-# /etc/skel/.bashrc
-#
-# This file is sourced by all *interactive* bash shells on startup,
-# including some apparently interactive shells such as scp and rcp
-# that can't tolerate any output.  So make sure this doesn't display
-# anything or bad things will happen !
-
-
 # Test for an interactive shell.  There is no need to set anything
 # past this point for scp and rcp, and it's important to refrain from
 # outputting anything in those cases.
@@ -14,8 +6,13 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
-
 # Put your fun stuff here.
+
+# Source all scripts in ~/.bash
+for file in ~/.bash/*.sh; do
+    [ -r "$file" ] && . "$file"
+done
+unset file
 
 # doas bash completion
 complete -cf doas
@@ -24,16 +21,6 @@ source /usr/share/bash-completion/completions/git
 # fzf bash completion
 source /usr/share/bash-completion/completions/fzf
 source /usr/share/fzf/key-bindings.bash
-
-
-# ALIASES
-alias nano="nvim"
-alias vim="nvim"
-
-alias lockscreen='i3lock -i /home/neo/Desktop/Images/lockscreen.png'
-
-alias journal='cd ~/digital-journal && nvim README.md'
-alias jrnl='cd ~/digital-journal && nvim README.md'
 
 
 # git status in prompt
