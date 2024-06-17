@@ -13,3 +13,6 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export NVD_BACKEND=direct
     export MOZ_ENABLE_WAYLAND=1
 fi
+
+# Start keychain and add SSH key
+eval $(keychain --eval --agents ssh ~/.ssh/id_ed25519)

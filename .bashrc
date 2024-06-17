@@ -9,22 +9,38 @@ fi
 # Put your fun stuff here.
 
 # Source all scripts in ~/.bash
-for file in ~/.bash/*.sh; do
-    [ -r "$file" ] && . "$file"
-done
+if [ -d "$HOME/.bashrc.d" ]; then
+    for file in "$HOME/.bashrc.d"/*.sh; do
+        [ -r "$file" ] && . "$file"
+    done
+fi
 unset file
+
+# Extended PATH
+export PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin"
+
+# No double entries in the shell history.
+export HISTCONTROL="${HISTCONTROL:-erasedups:ignoreboth}"
+export HISTSIZE="${HISTSIZE:-2000}"
+export HISTFILESIZE="${HISTFILESIZE:-2000}"
+
+# Wrap the following commands for interactive use to avoid accidental file overwrites.
+rm() { command rm -i "${@}"; }
+cp() { command cp -i "${@}"; }
+mv() { command mv -i "${@}"; }
 
 # doas bash completion
 complete -cf doas
-# git bash completion
-source /usr/share/bash-completion/completions/git
+# Git bash completion
+[ -r /usr/share/bash-completion/completions/git ] && source /usr/share/bash-completion/completions/git
 # fzf bash completion
-source /usr/share/bash-completion/completions/fzf
-source /usr/share/fzf/key-bindings.bash
+[ -r /usr/share/bash-completion/completions/fzf ] && source /usr/share/bash-completion/completions/fzf
+[ -r /usr/share/fzf/key-bindings.bash ] && source /usr/share/fzf/key-bindings.bash
 
-
-# git status in prompt
-source /usr/share/git/git-prompt.sh
+# Customize shell prompt
 export PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \w\[\033[01;33m\]$(__git_ps1)\[\033[01;34m\] \$\[\033[00m\] 󰣨 '
+
+# Git status in prompt
+source /usr/share/git/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
-export PATH=/home/neo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/opt/bin:/usr/lib/llvm/17/bin
+

@@ -17,6 +17,9 @@ setxkbmap -option caps:hyper
 # Start PipeWire before DWM to ensure it's in the same D-Bus session
 gentoo-pipewire-launcher &
 
+# Notification daemon
+dunst &
+
 # Start dwm with dbus-launch
 # "exec" means that no subsequent commands in that file will be executed
 exec dbus-launch --sh-syntax --exit-with-session dwm
