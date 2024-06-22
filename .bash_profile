@@ -14,5 +14,16 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
 
+# GTK
+export GDK_SCALE=2
+export GDK_DPI_SCALE=2
+export GTK_THEME=Adwaita-dark
+
+gnome_schema="org.gnome.desktop.interface"
+gsettings set "$gnome_schema" font-name 'SauceCodePro Nerd Font 24'
+gsettings set "$gnome_schema" gtk-theme Adwaita
+gsettings set "$gnome_schema" cursor-theme 'Bibata-Modern-Classic'
+gsettings set "$gnome_schema" cursor-size 48
+
 # Start keychain and add SSH key
 eval $(keychain --eval --agents ssh ~/.ssh/id_ed25519)

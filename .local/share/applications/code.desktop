@@ -1,0 +1,18 @@
+[Desktop Entry]
+Name=VSCode
+Comment=Editing evolved
+GenericName=Code Editor
+Exec=env GTK_THEME=Adwaita:dark /usr/bin/vscode --ozone-platform-hint=auto --enable-wayland-ime --use-gl=egl --new-window %F
+Icon=vscode
+Type=Application
+StartupNotify=false
+StartupWMClass=Code
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=text/plain;inode/directory;application/x-code-workspace;
+Actions=new-empty-window;
+Keywords=vscode;code;
+
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Exec=env GTK_THEME=Adwaita:dark /usr/bin/vscode --ozone-platform-hint=auto --enable-wayland-ime --use-gl=egl --new-window %F
+Icon=vscode
