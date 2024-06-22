@@ -14,11 +14,11 @@ xrdb -merge ~/.Xresources
 # Remap Caps Lock to Hyper
 setxkbmap -option caps:hyper
 
-# Start PipeWire before DWM to ensure it's in the same D-Bus session
-gentoo-pipewire-launcher &
-
 # Notification daemon
 dunst &
+
+# Start PipeWire before DWM to ensure it's in the same D-Bus session
+gentoo-pipewire-launcher &
 
 # Start dwm with dbus-launch
 # "exec" means that no subsequent commands in that file will be executed

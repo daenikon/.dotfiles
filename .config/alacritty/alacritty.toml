@@ -12,4 +12,4 @@ decorations = "None"
 
 [font]
 normal = { family = "SauceCodePro Nerd Font", style = "Regular" }
-size = 8
+size = 24

@@ -1,21 +1,25 @@
 #!/bin/bash
 
-UTILITY="/usr/bin/xbacklight"
+UTILITY="/usr/bin/brightnessctl"
 
 case $1 in
     up)
-        $UTILITY -ctrl intel_backlight -inc 5
+        $UTILITY --quiet --device intel_backlight set +5%
         ;;
     down)
-        $UTILITY -ctrl intel_backlight -dec 5
+        $UTILITY --quiet --device intel_backlight set 5%-
         ;;
     *)
         exit 1
         ;;
 esac
 
-BRIGHTNESS=$($UTILITY -ctrl intel_backlight -get)
+# Get intel brightness value (0 - 48000)
+BRIGHTNESS=$($UTILITY -d intel_backlight get)
+
+# Get percentage
+PERCENTAGE=$((BRIGHTNESS / 480))
 
 # Send notification with category "brightness"
-notify-send -c brightness "Brightness: $BRIGHTNESS%" -h "int:value:$BRIGHTNESS"
+notify-send -c brightness "Brightness: $PERCENTAGE%" -h "int:value:$PERCENTAGE"
 
