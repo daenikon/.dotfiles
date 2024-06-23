@@ -15,8 +15,8 @@ if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
 fi
 
 # GTK
-export GDK_SCALE=2
-export GDK_DPI_SCALE=2
+export GDK_SCALE=1
+export GDK_DPI_SCALE=1
 export GTK_THEME=Adwaita-dark
 
 gnome_schema="org.gnome.desktop.interface"

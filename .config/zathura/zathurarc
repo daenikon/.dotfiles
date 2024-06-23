@@ -1,0 +1,9 @@
+# Enable copy to clipboard
+set selection-clipboard clipboard
+# Enable Sandbox
+set sandbox strict
+
+set font "SauceCodePro Nerd Font 32"
+
+map <C-=> zoom in
+map <C--> zoom out
