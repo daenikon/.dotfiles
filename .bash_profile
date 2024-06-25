@@ -9,4 +9,4 @@ fi
 #export GDK_DPI_SCALE=1
 
 # Start keychain and add SSH key
-eval $(keychain --eval --agents ssh ~/.ssh/id_ed25519)
+eval $(keychain --quiet --eval --agents ssh ~/.ssh/id_ed25519)
