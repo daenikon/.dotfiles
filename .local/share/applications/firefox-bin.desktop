@@ -3,7 +3,7 @@ Version=1.0
 Name=Mozilla Firefox (bin)
 GenericName=Web Browser
 Comment=Browse the Web
-Exec=firefox-bin %u
+Exec=env GBM_BACKEND="" firefox-bin %u
 Icon=firefox-bin
 Terminal=false
 Type=Application
@@ -17,9 +17,9 @@ StartupWMClass=firefox
 [Desktop Action new-window]
 Name=Open a New Window
 Name[en_US]=New Window
-Exec=firefox-bin --new-window %u
+Exec=env GBM_BACKEND="" firefox-bin --new-window %u
 
 [Desktop Action new-private-window]
 Name=Open a New Private Window
 Name[en_US]=New Private Window
-Exec=firefox-bin --private-window %u
+Exec=env GBM_BACKEND="" firefox-bin --private-window %u

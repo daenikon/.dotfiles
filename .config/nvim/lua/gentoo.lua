@@ -1,7 +1,6 @@
-#local DIR = "/home/neo/digital-journal/Gentoo"
 local DIR = "/home/neo/digital-journal"
-local TEMPLATE = "/home/neo/.config/nvim/templates/gentoo_note.md"
-
+local GENTOO_TEMPLATE = "/home/neo/.config/nvim/templates/gentoo_note.md"
+local INPUT_TEMPLATE = "/home/neo/.config/nvim/templates/input_note.md"
 
 -- FUNCTIONS
 -- change date in metadata fields
@@ -42,6 +41,7 @@ function insert_web_reference()
   local url = vim.fn.input('Enter URL: ')
   local arch_wiki = "https://wiki.archlinux.org/title/"
   local gentoo_wiki = "https://wiki.gentoo.org/wiki/"
+  local github = "https://github.com/"
 
   local title = nil
 
@@ -49,6 +49,8 @@ function insert_web_reference()
     title = url:match("title/(.+)") .. " | Arch Wiki"
   elseif string.sub(url, 1, #gentoo_wiki) == gentoo_wiki then
     title = url:match("wiki/(.+)") .. " | Gentoo Wiki"
+  elseif string.sub(url, 1, #github) == github then
+    title = url:match("github.com/(.+)") .. " | GitHub"
   end
 
   if title then
@@ -62,11 +64,19 @@ end
 
 
 -- AUTOCOMMANDS
+-- load template
 -- change "created" metadata-field on entering new buffer
 vim.api.nvim_create_autocmd("BufNewFile", {
-  pattern = DIR .. "/*.md",
+  pattern = DIR .. "/Gentoo" .. "/*.md",
   callback = function()
-    vim.cmd('0r ' .. TEMPLATE)
+    vim.cmd('0r ' .. GENTOO_TEMPLATE)
+    change_date("created", 1)
+  end
+})
+vim.api.nvim_create_autocmd("BufNewFile", {
+  pattern = DIR .. "/Input" .. "/*.md",
+  callback = function()
+    vim.cmd('0r ' .. INPUT_TEMPLATE)
     change_date("created", 1)
   end
 })

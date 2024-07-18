@@ -2,20 +2,25 @@
 created: dd.mm.yyyy
 updated: dd.mm.yyyy
 tags:
-  - cli
+  - productivity 
+  - proprietary  
+  - developement 
+  - lightweight  
+  - cosmetic     
+  - wayland      
+  - utility      
+  - core         
+  - misc         
+  - gui          
+  - cli          
+
 status: incomplete
 ---
 
 # Title
-- **Package**: ` `
+- **Gentoo Package**: ` `
 - **Config**: ` `
 
 ## Log
-
-### Configuration
-
-### Troubleshooting
-
-# TODO
 
 # References
