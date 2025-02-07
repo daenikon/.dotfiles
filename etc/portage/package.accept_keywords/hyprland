@@ -1,0 +1,5 @@
+gui-apps/hyprlock ~amd64
+dev-cpp/sdbus-c++ ~amd64
+
+dev-libs/hyprgraphics ~amd64
+gui-apps/hyprshot ~amd64

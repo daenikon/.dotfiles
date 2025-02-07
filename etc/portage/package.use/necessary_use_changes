@@ -1,0 +1,17 @@
+# required by dev-qt/qtwayland-6.7.3-r1::gentoo
+=dev-qt/qtbase-6.7.3-r2 opengl
+# required by dev-qt/qttranslations-6.7.3::gentoo
+# required by dev-qt/qtbase-6.7.3-r2::gentoo[nls]
+# required by dev-qt/qtwayland-6.7.3-r1::gentoo
+=dev-qt/qttools-6.7.3 opengl
+
+
+# --- 
+# # required by media-libs/mesa-24.2.8::gentoo[X]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libX11-1.8.10-r1 abi_x86_32
+# required by media-libs/mesa-24.2.8::gentoo
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libdrm-2.4.124 abi_x86_32

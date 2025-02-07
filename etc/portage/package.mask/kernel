@@ -1,0 +1,4 @@
+# /etc/portage/package.mask/kernel
+=sys-kernel/gentoo-kernel-bin-6.6.67
+=virtual/dist-kernel-6.6.67
+
