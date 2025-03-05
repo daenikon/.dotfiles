@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Extended PATH
-export PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.cargo/bin:$HOME/bin"
+export PATH="$HOME/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:$HOME/.cargo/bin:$HOME/bin:$PATH"
 
 # No double entries in the shell history.
 export HISTCONTROL="${HISTCONTROL:-erasedups:ignoreboth}"
