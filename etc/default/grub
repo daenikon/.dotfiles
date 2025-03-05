@@ -19,7 +19,7 @@ GRUB_DISTRIBUTOR="Gentoo"
 
 # Append parameters to the linux kernel command line
 #GRUB_CMDLINE_LINUX="rootflags=subvol=nixos_root"
-GRUB_CMDLINE_LINUX="intel_idle.max_cstate=0"
+GRUB_CMDLINE_LINUX="intel_idle.max_cstate=0 nvidia_drm.modeset=1"
 
 GRUB_DISABLE_OS_PROBER=false
 #
