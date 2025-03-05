@@ -1,1 +1,1 @@
-media-video/pipewire sound-server
+media-video/pipewire sound-server pipewire-alsa gsettings gstreamer ffmpeg v4l echo-cancel zeroconf extra
