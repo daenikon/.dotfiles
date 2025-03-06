@@ -1,0 +1,4 @@
+config_eth0="dhcp"
+
+modules_wlp0s20f3="wpa_supplicant"
+config_wlp0s20f3="dhcp"
